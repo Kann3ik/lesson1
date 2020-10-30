@@ -15,18 +15,17 @@ function multiply(a, b){
 }
 
 function mathOperation(a, b, operation){
-    return operation(a, b);
+    switch(operation){
+        case plus:
+            console.log(plus(a, b)); break;
+        case minus:
+            console.log(minus(a, b)); break;
+        case split:
+            console.log(split(a, b)); break;
+        case multiply:
+            console.log(multiply(a, b)); break;
+    }
+    
 }
 
-let operation = multiply;
-
-switch(operation){
-    case plus:
-        console.log(mathOperation(5, 3, plus)); break;
-    case minus:
-        console.log(mathOperation(5, 3, minus)); break;
-    case split:
-        console.log(mathOperation(5, 3, split)); break;
-    case multiply:
-        console.log(mathOperation(5, 3, multiply)); break;
-}
+mathOperation(5, 2, plus);
