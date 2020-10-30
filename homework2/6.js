@@ -16,16 +16,16 @@ function multiply(a, b){
 
 function mathOperation(a, b, operation){
     switch(operation){
-        case plus:
+        case 'plus':
             console.log(plus(a, b)); break;
-        case minus:
+        case 'minus':
             console.log(minus(a, b)); break;
-        case split:
+        case 'split':
             console.log(split(a, b)); break;
-        case multiply:
+        case 'multiply':
             console.log(multiply(a, b)); break;
     }
     
 }
 
-mathOperation(5, 2, plus);
+mathOperation(5, 2, 'multiply');
