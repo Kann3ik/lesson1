@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<script>
+  "use strict";
+  const Product = {
+    goods: [
+      {
+        id_product: 123,
+        product_name: "Ноутбук",
+        price: 45000,
+        quantity: 1
+      },
+      {
+        id_product: 456,
+        product_name: "Мышка",
+        price: 1000,
+        quantity: 1
+      },
+      {
+        id_product: 456,
+        product_name: "Монитор",
+        price: 15000,
+        quantity: 1
+      },
+      {
+        id_product: 456,
+        product_name: "Клавиатура",
+        price: 10000,
+        quantity: 1
+      },
+      {
+        id_product: 456,
+        product_name: "Коврик",
+        price: 1000,
+        quantity: 1
+      },
+    ],
+    countBasketPrice() {
+      let sum = 0;
+      sum = this.goods.reduce((totalPrice, cartItem) => totalPrice += cartItem.price, 0);
+      let count = this.goods.length;
+      if (count === 0)
+        return 'Ваша корзина пуста';
+      else
+        return 'В корзине: ' + count + ' товаров на сумму ' + sum + ' рублей.';
+    }
+  };
+
+  document.write(Product.countBasketPrice());
+
+
+
+
+
+
+
+</script>
